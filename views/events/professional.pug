@@ -1,0 +1,53 @@
+extends ../layout
+
+block content
+	div(class='bg-light text-dark')
+		.slideshow-container
+			div(class='mySlides fadein' style="display:block;")
+				img(src='../media/events/professional/epsilonconf.jpg' style="width:100%")
+				div(class='text text-light') 9/13/16 What is this
+			div(class='mySlides fadein')
+				img(src='../media/events/professional/careerfair.jpg' style="width:100%")
+				div(class='text text-dark') 2/10/16 Career Fair Prep 
+			div(class='mySlides fadein')
+				img(src='../media/events/professional/demistifying.jpg' style="width:100%")
+				div(class='text text-light') 3/15/16 Demistifying Series
+			div(class='mySlides fadein')
+				img(src='../media/events/professional/elevatorpitch.jpg' style="width:100%")
+				div(class='text text-light') 10/24/16 Elevator Pitch Workshop
+			div(class='mySlides fadein')
+				img(src='../media/events/professional/swe.jpg' style="width:100%")
+				div(class='text text-light') SWE Conference
+			div(class='mySlides fadein')
+				img(src='../media/events/professional/fb.jpg' style="width:100%")
+				div(class='text text-light') Facebook
+			div(class='mySlides fadein')
+				img(src='../media/events/professional/engineeringball.png' style="width:100%")
+				div(class='text text-light') Engineeringball 
+			div(class='mySlides fadein')
+				img(src='../media/events/professional/engineerproject.jpg' style="width:100%")
+				div(class='text text-light') Engineering Project 
+			// Next and previous buttons 
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		<br>
+		// The dots/circles 
+		div(style="text-align:center")
+			<span class="dot active" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+			<span class="dot" onclick="currentSlide(6)"></span>
+			<span class="dot" onclick="currentSlide(7)"></span>
+			<span class="dot" onclick="currentSlide(8)"></span>
+		
+		.container
+			.row
+				div(class="nine columns  pt2 pb2")
+					h6(class='title') Professional 
+					svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" width="52px" height="2px" viewBox="0 0 52 2" version="1.1")
+						g(id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage")
+							path(d="M1.5,1 L50.3364601,1" id="Line" stroke="#E03B3B" stroke-width="2" stroke-linecap="square" sketch:type="MSShapeGroup")
+			.row
+				p At over 35,000 members, Theta Tau is the oldest, largest, and foremost Fraternity for Engineers. <br><br>

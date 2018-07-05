@@ -1,0 +1,319 @@
+/*texts*/
+
+/* nav bar */
+nav ul a,
+nav .brand-logo {
+    color: #444;
+}
+nav img{
+    height:120%;
+    width:120%;
+    margin:0 auto;
+}
+nav{
+  height: 5em;
+  position:relative;
+}
+
+nav span{
+  font-size: 1.2em;
+  line-height: 1.68;
+  letter-spacing: 0.1em;;
+  -webkit-font-smoothing: antialiased;
+}
+nav p {
+  line-height: 2rem;
+}
+nav .button-collapse {
+  color: #26a69a;
+}
+
+nav .right{
+  margin-right:-5em;
+}
+
+.nav-wrapper a{
+    margin-top:-2em;
+}
+
+#logo-container{
+    margin-top: -1.2em;
+}
+
+/*dropdown menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdowncontent{
+  position: absolute;
+  z-index:1;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/*.dropdown:hover .dropdowncontent {display: block;}
+/*
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+*/
+/*container */
+.container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+/*PARALLAX*/
+.parallax-container {
+  min-height: 450px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+.parallax-container .container h1{
+  font-weight: bold;
+  font-size: 3em;
+  vertical-align: middle;
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+/*category texts*/
+.category {
+    font-size: 1.5em;
+    line-height: 1.68;
+    letter-spacing: 0.1em;
+    color: #808080;
+    -webkit-font-smoothing: antialiased;
+    margin-top:12px;
+}
+
+.bg-light,.bg-white .category{
+  color: #808080;
+}
+
+
+#pitch {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+
+/*ghost button*/
+.ghost-button-rounded-corners {
+    display: inline-block;
+    width: 15em;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 2em;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: background-color 0.2s ease-out, color 0.2s ease-out;
+}
+
+.ghost-button-rounded-corners:hover,
+.ghost-button-rounded-corners:active {
+    background-color: #fff;
+    color: #000;
+    opacity: 0.8;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+
+/*SLIDESHOWS*/
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+.mySlides img{
+    height:50em;
+}
+
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+.fadein {
+    -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s
+}
+
+
+@keyframes fadein {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0.4; }
+    to   { opacity: 1; }
+}
+
+
+
+#description{
+    padding:5em;
+    margin-left:10em;
+    margin-right:10em;
+}
+
+#description p{
+    padding-left: 1em;
+    font-size:1.1em;
+}
+
+
+h2 {
+    font-weight: 700;
+    line-height: 1.68;
+    letter-spacing: 0.03em;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*footer*/
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 300px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 300px;
+}
+
+/* Taller footer on small screens */
+@media (max-width: 34em) {
+    body {
+      margin-bottom: 500px;
+    }
+    .footer {
+      height: 500px;
+    }
+}
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+.footer {
+  padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;
+}
+
+.footer a {
+  color: #999;
+  text-decoration:none;
+}
+
+.footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+.footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}

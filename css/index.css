@@ -1,0 +1,179 @@
+/*texts*/
+p, a{
+  font-size: 0.7em;
+  margin-left: 0.6em;
+  margin-top: -1em;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*parallax*/
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+ 
+#who-are-we h5{
+  font-size:1.5em;
+}   
+
+/*what we do imgs*/
+#what-we-do-text{
+  font-size: 1.0em;
+  margin-left: -2.2em;
+}
+
+.what-we-do .column {
+    float: left;
+    width: 33.3%;
+    margin:0;
+    position:relative;
+}
+
+.what-we-do .row{
+    height:100%;
+    margin:0;
+}
+
+.what-we-do .button{
+    position:absolute;
+    top:50%;
+    left:25%;
+    border-color:transparent;
+}
+
+.what-we-do img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+/*Where we have been*/
+#btn-employers, #btn-oncampus {
+    color: #444;
+    border: 1px solid #444;
+    position:center;
+    width:180px;
+}
+
+.employer-logo{
+    width: 80%;
+    height: 70%;
+    
+}
+
+#where-we-have-been {
+    padding: 0em;
+    margin-left:9em;
+    margin-right:7em;
+}
+#where-we-have-been img {
+    padding-right: 0em;
+    padding-left:0em;
+    padding-top: 0.5em;
+    padding-bottom:0.5em;
+}
+
+/*brothers eboard*/
+
+.eboard{
+  margin-right:-9em;
+  margin-left: -.5em;
+}
+.fill {
+  display:block;
+  margin-right:-1em;
+}
+.fill img {
+  width:100%;
+  height:250px;
+}
+
+.decorated-2 {
+    color: #333;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1em;
+}
+
+.decorated {
+    color: grey;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1em;
+}
+
+.mb0 {
+    margin-bottom: 1em !important;
+}
+
+.mt1 {
+    margin-top: .8em;
+}
+
+.mb2{
+  margin-bottom: 1.6em;
+}
+
+.h7 {
+    font-size: 1.2rem;
+}
+
+.caption{
+  font-size:1em;
+  color: grey;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*brothers*/
+.brothers{
+  padding-left: 7em;
+  padding-bottom: 6.4em;
+  padding-top: 3.2em;
+  border-bottom: solid 1px #F2F2F2; 
+}
+
+.brothers .ten {
+  margin-top: 2.2em;
+  margin-left: -2em;
+}
+
+/*modal*/
+.modal img {
+  width:100%;
+}
+
+.modal-title{
+  width: 95%;
+  margin: 0 auto;
+}
+
+.modal-title h6{
+  margin-top: .3em;
+}
+
+.modal-title p{
+  margin-top: .1em;
+  margin-bottom: .3em;
+}
+
+.modal p{
+  font-size:1em;
+}
