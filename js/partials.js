@@ -1,7 +1,7 @@
-/*
+
 var slideIndex = 1;
 showSlides(slideIndex);
-*/
+
 var dropdown = document.getElementsByClassName("dropdowncontent");
 $( document ).ready(function() {
     for(i = 0; i < dropdown.length; i++){

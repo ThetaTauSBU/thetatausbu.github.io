@@ -3,7 +3,6 @@ window.oncampusInfo = [
     {"company": "Motor Sports", "link":"http://me.eng.sunysb.edu/~motorsports/", "img":"motorsportslogo.jpg"},
     {"company": "Solar Racing", "link":"https://sbusolarracing.weebly.com", "img":"solar.png"},
     {"company": "Stony Brook Computing Society", "link":"https://www.sbcs.io", "img":"sbcs.png"},
-    {"company": "MTA", "link":"http://www.mta.info", "img":"mta.png"},
     {"company": "BMES", "link":"https://www.bme.sunysb.edu/BMES/", "img":"bmes.png"},
     {"company": "CASB", "link":"", "img":"casb.jpg"},
     {"company": "IEEE", "link":"http://www.ieee.org", "img":"ieee.gif"},

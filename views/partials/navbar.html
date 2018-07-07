@@ -11,15 +11,6 @@
     <link rel='stylesheet' href='../../css/partials.css', media="screen,projection", type="text/css" />  
 </head>
 <body>
-    
-    <ul id='brotherdropdown' class='dropdown-content'>
-        <li>
-            <a href='/brothers?who=all' class='blue-text'> All </a>
-        </li>
-        <li class='template' style="display: none">
-            <a href="/brothers?who=class" class="blue-text light">text</a>
-        </li>
-    </ul>
     <script>
         var dropdown = document.getElementsByClassName("dropdowncontent");
         $( document ).ready(function() {
@@ -41,63 +32,65 @@
     </script>
     <nav class='bg-dark text-white' role='navigation'>
         <div class='nav-wrapper container'>
-            <a class='brand-logo' href='/' id='logo-container'>
+            <a class='brand-logo' href='../index.html' id='logo-container'>
                 <img src='../../media/general/crest_small.png' vspace='15' />
             </a>
             <ul class='right hide-on-med-and-down'>
                 <li>
-                    <a href="/" class="white-text text-lighten-2" style="text-decoration: none;"><span>HOME</span></a> 
+                    <a href="index.html" class="white-text text-lighten-2" style="text-decoration: none;"><span>HOME</span></a> 
                 </li>
                 <li class='dropdown' onmouseover='showDropdown(1)' onmouseout='hideDropdown(1)'>
-                    <a href="/#who-are-we" class="white-text text-lighten-2" style="text-decoration: none;">
+                    <a href="#who-are-we" class="white-text text-lighten-2" style="text-decoration: none;">
                         <span>ABOUT</span>
                         <div class='dropdowncontent'>
-                            <a href='/about' style="text-decoration: none;"><span>Our Chapter</span></a>
-                            <a href='/about/thetatau' style="text-decoration: none;"><span>Theta Tau</span></a> 
-                            <a href='/about/greeklife' style="text-decoration: none;"><span>Greek Life</span></a> 
+                            <a href='views/about/zetaepsilon.html' style="text-decoration: none;"><span>Our Chapter</span></a>
+                            <a href='views/about/thetatau.html' style="text-decoration: none;"><span>Theta Tau</span></a> 
+                            <a href='views/about/greeklife.html' style="text-decoration: none;"><span>Greek Life</span></a> 
                         </div>
                     </a>
                 </li>
                 <li class='dropdown' onmouseover='showDropdown(2)' onmouseout='hideDropdown(2)'>
-                    <a href="/#who-are-we" class="white-text text-lighten-2" style="text-decoration: none;">
+                    <a href="#what-we-do" class="white-text text-lighten-2" style="text-decoration: none;">
                         <span>EVENTS</span>
                         <div class='dropdowncontent'>
-                            <a href='/events/brotherhood' style="text-decoration: none;"><span>Brotherhood</span></a>
-                            <a href='/events/professional' style="text-decoration: none;"><span>Professional</span></a> 
-                            <a href='/events/service' style="text-decoration: none;"><span>Service</span></a> 
-                            <a href='/events/annual' style="text-decoration: none;"><span>Annual</span></a>
+                            <a href='../events/brotherhood.html' style="text-decoration: none;"><span>Brotherhood</span></a>
+                            <a href='../events/professional.html' style="text-decoration: none;"><span>Professional</span></a> 
+                            <a href='../events/service.html' style="text-decoration: none;"><span>Service</span></a> 
+                            <a href='../events/annual.html' style="text-decoration: none;"><span>Annual</span></a>
                         </div>
                     </a>
                 </li>
                 <li class='dropdown' onmouseover='showDropdown(3)' onmouseout='hideDropdown(3)'>
-                    <a href="/#spotlight" class="white-text text-lighten-2" style="text-decoration: none;"> 
+                    <a href="#index-slideshow" class="white-text text-lighten-2" style="text-decoration: none;"> 
                         <span>SPOTLIGHT</span>
                         <div class='dropdowncontent'>
-                            <a href='/spotlight' style="text-decoration: none;"><span>All</span></a>
+                            <a href='../views/spotlight.html?who=all' style="text-decoration: none;"><span>All</span></a>
                         </div>
                         
                     </a>
                 </li>
-                <li>
-                    <a href='/rush' class="white-text text-lighten-2" style="text-decoration: none;"><span>RUSH</span></a> 
+                <li class='dropdown' onmouseover='showDropdown(3)' onmouseout='hideDropdown(3)'>
+                    <a href="views/rush.html" class="white-text text-lighten-2" style="text-decoration: none;"> 
+                        <span>RUSH</span>
+                    </a>
                 </li>
                 <li class='dropdown' onmouseover='showDropdown(4)' onmouseout='hideDropdown(4)'>
-                    <a href="/#brothers" class="white-text text-lighten-2" style="text-decoration: none;"> 
+                    <a href="#eboard" class="white-text text-lighten-2" style="text-decoration: none;"> 
                         <span>BROTHERS</span>
                         <div class='dropdowncontent'>
-                            <a href='/brothers?who=all' style="text-decoration: none;"><span>All</span></a>
+                            <a href='../../views/brothers.html' style="text-decoration: none;"><span>All</span></a>
                         </div>
                     </a>
                 </li>
             </ul>
             <ul class="side-nav" id="nav-mobile" style="left: -250px;">
                 <li class='active'>
-                    <a href="/" class="white-text text-lighten-2" style="text-decoration: none;"><span>HOME</span></a>
+                    <a href="../views/index.html" class="white-text text-lighten-2" style="text-decoration: none;"><span>HOME</span></a>
                 </li>
                 <li>
-                    <a href="/rush" class="white-text light" style="text-decoration: none;"><span>RUSH</span></a> 
+                    <a href="../views/rush.html" class="white-text light" style="text-decoration: none;"><span>RUSH</span></a> 
                 <li>
-                    <a href="/brothers?who=all" class="white-text light" style="text-decoration: none;"><span>BROTHERS</span></a>
+                    <a href="../views/brothers.html" class="white-text light" style="text-decoration: none;"><span>BROTHERS</span></a>
                 </li>
             </ul>
             <a class="button-collapse white-text" data-activates="nav-mobile" href="#" style="text-decoration: none;"><i class="material-icons">menu</i></a>

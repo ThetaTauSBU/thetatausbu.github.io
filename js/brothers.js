@@ -1,10 +1,18 @@
 var selectedClass=false;
+var template = document.querySelector('.template');
+ /**
+   * Main Container HTML
+   */
+  var mainContainer = document.querySelector('#main');
+  //all
+ 
 $(document).ready(function(){
+  var bannerHTML = '';
+  var bannerImageHTML = '';
   /**
    * Populate class dropdown menu
    */
   var template = document.querySelector('.template');
-  var brotherdropdown = document.querySelector('#brotherdropdown');
   //find out what page we're on
   var className = window.location.search.split('=')[1];
   if(typeof className === 'undefined') className = 'all';
@@ -12,27 +20,12 @@ $(document).ready(function(){
 
   var chosenClass = {};
   for(var i = 0; i < classesInfo.length; ++i){
-    var classElement = template.cloneNode(true); //clone the template
-    classElement.style.display = 'block'; //set the clone to be displayed
-    classElement.classList.remove('template'); //remove template class
-    classElement.childNodes[0].innerHTML = classesInfo[i].className; //add classname to the text
-    classElement.childNodes[0].href = '/brothers?who='+classesInfo[i].className; //add class to the end of the href
     //highlight if we're on brothers
     if(classesInfo[i].className === className){
-      classElement.classList.add('selected');
       chosenClass = classesInfo[i];
     }
-    brotherdropdown.appendChild(classElement);
   }
-
-  
-  /**
-   * Main Container HTML
-   */
-  var mainContainer = document.querySelector('#main');
-  //all
-  var bannerHTML = '';
-  var bannerImageHTML = '';
+ 
   if(className === 'all'){
     selectedClass=false;
     /**
@@ -145,22 +138,40 @@ $(document).ready(function(){
 
       classCard += '<div class="row">';
       classCard += '<div class="col s12 m9 l10" id="'+classesInfo[i]['className'] +'">';
-      classCard += '<a href="/brothers?who=' + classesInfo[i]['className'] + '"><img src="/media/brothers/classes/' + classesInfo[i]["numericalClassNum"] + '.jpg" width="100%" /></a>';
+     // classCard += '<a href="/brothers?who=' + classesInfo[i]['className'] + '">
+      classCard += '<img src="/media/brothers/classes/' + classesInfo[i]["numericalClassNum"] + '.jpg" width="100%" onclick="displayClass('+classesInfo[i]["className"]+')" />';//</a>';
       classCard += '</div>';
       classCard += '</div>';
       section.innerHTML += classCard;
     }
 
   }
+  //inject banner
+  document.querySelector('#index-banner').querySelector('.container').innerHTML = bannerHTML;
+  //inject banner image
+  document.querySelector('.parallax').innerHTML = bannerImageHTML;
+});
+
+
+function displayClass(name){
+    //$('#index-banner').empty();
+   $('#main').empty();
+    var chosenClass = {};
+      for(var i = 0; i < classesInfo.length; ++i){
+        //highlight if we're on brothers
+        if(classesInfo[i].className === name.id){
+          chosenClass = classesInfo[i];
+        }
+      }
+    console.log(chosenClass);
   //specific class
-  else{
-    selectedClass=true;
+      selectedClass=true;
     /**
      * Banner HTML
      */
-    bannerHTML += '<h1 class="header center white-text text-lighten-2">' + chosenClass['className'] + ' Class </h1>';
+    var bannerHTML = '<h1 class="header center white-text text-lighten-2">' + chosenClass['className'] + ' Class </h1>';
     bannerHTML += '<h5 class="header center col s12 light">Crossed ' + chosenClass['crossSemester'] + ' \'' + chosenClass['crossYear'] + '</h5>';
-    bannerImageHTML = '<img alt="Unsplashed background img 1" src="/media/brothers/classes/' + chosenClass['numericalClassNum'] + '.jpg" style="display: block; transform: translate3d(100%, 357px, 0px);">';
+    var bannerImageHTML = '<img alt="Unsplashed background img 1" src="/media/brothers/classes/' + chosenClass['numericalClassNum'] + '.jpg" style="display: block; transform: translate3d(100%, 357px, 0px);">';
 
     /**
      * Brother cards
@@ -169,7 +180,6 @@ $(document).ready(function(){
     var cards = [];
     for(var i = chosenClass.classNums[0]; i < chosenClass.classNums[1]; ++i){
       var brother = brothersInfo[i-1];
-      
       //create card HTML
       var cardHTML = '';
       cardHTML += '<div class="row">';
@@ -197,17 +207,19 @@ $(document).ready(function(){
           }
       }              
       cardHTML += '</p></div></div>';
-      cardHTML += '<br><div class="divider"></div><br>';
+     if(i != chosenClass.classNums[1]-1){
+        cardHTML += '<br><div class="divider"></div><br>';
+     }
       cards.push(cardHTML);
     }
-
-  
-  }
-  //inject banner
+    mainContainer.innerHTML += cards;
+    //inject banner
   document.querySelector('#index-banner').querySelector('.container').innerHTML = bannerHTML;
   //inject banner image
   document.querySelector('.parallax').innerHTML = bannerImageHTML;
-});
+    
+}
+
 
 
 //todo(rohan) fix this...
@@ -219,7 +231,6 @@ $(document).ready(function(){
     // Floating-Fixed table of contents for brothers page
     if(!selectedClass){
     setTimeout(function() {
-      console.log($('#Founder').offset());
      $('.table-of-contents').pushpin({top: $('#Founder').offset().top+20});
     },100);
   }

@@ -92,10 +92,6 @@ h1,h2,h3,h4,h5,h6{
 
 /*brothers eboard*/
 
-.eboard{
-  margin-right:-9em;
-  margin-left: -.5em;
-}
 .fill {
   display:block;
   margin-right:-1em;
@@ -143,6 +139,13 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /*brothers*/
+.people{
+    margin-left:9em;
+    margin-right:7em;
+}
+#brothers{
+    margin-right:7em;
+}
 .brothers{
   padding-left: 7em;
   padding-bottom: 6.4em;

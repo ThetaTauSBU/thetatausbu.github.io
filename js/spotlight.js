@@ -37,7 +37,7 @@ $(document).ready(function(){
 	 	for(var i = 0; i < spotlightInfo.length; ++i){
 	      var post = ''
 	      post += '<div class="row">';
-	      post += '<a href="/spotlight?who=' + spotlightInfo[i]['brotherNum'] + '"><img src="/media/spotlight/' + spotlightInfo[i]['brotherNum'] + '.jpg" id='+spotlightInfo[i]['brotherNum']+' width="100%" /></a>';
+	      post += '<a href="spotlight.html?who=' + spotlightInfo[i]['brotherNum'] + '"><img src="/media/spotlight/' + spotlightInfo[i]['brotherNum'] + '.jpg" id='+spotlightInfo[i]['brotherNum']+' width="100%" /></a>';
 	      post += '</div>';
 	      post += '<div class="row">';
 	      post += '<p><b>'+spotlightInfo[i]['title']+'</b></p>';
@@ -58,7 +58,7 @@ $(document).ready(function(){
 	    $(".dropdown-button").dropdown();
 	    $('.scrollspy').scrollSpy();
    	}else{
-   		console.log(className);
+        console.log(className);
    		var imageHTML = mainContainer.querySelector('#image');
    		console.log(imageHTML);
    		imageHTML.innerHTML += '<img src="/media/spotlight/' + className + '.jpg" width=100% style="display: block;">';
@@ -79,13 +79,7 @@ $(document).ready(function(){
 
    		mainContainer.innerHTML += section;
    		console.log(mainContainer);
-   	}
-})
-
-function spotlight(n){
-
-}
-
-
+    }
+});
 
 	
